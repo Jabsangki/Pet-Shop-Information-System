@@ -1,0 +1,29 @@
+{
+  "name": "decodeapp",
+  "version": "1.0.0",
+  "description": "Decode App Boilerplate",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://https://avatars1.githubusercontent.com/u/23370057?v=3&u=8049e00e11a3a4271654bb5131f486f091e48710&s=140"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/username/reponame/issues"
+  },
+  "homepage": "https://github.com/username/reponame#readme",
+  "dependencies": {
+    "consolidate": "^0.14.4",
+    "express": "^4.14.0",
+    "handlebars": "^4.0.5",
+    "swig": "^1.4.2"
+  },
+  "engines": {
+    "node": "4.4.7"
+  }
+}
