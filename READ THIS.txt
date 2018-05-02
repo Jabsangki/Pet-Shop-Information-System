@@ -1,0 +1,13 @@
+Delete old mysqldb..
+import the new one
+
+USC1 done ( display login error)
+USC2 done (password confirm & user confirm error display done)
+USC3 pending (no error in saving)
+USC4 done/pending (user Profile)
+USC5 done/design pending(mail)
+	test email sent = 
+		vetco.email@gmail.com
+		vetcoadmin123
+Admin panel.. 
+VIEW/ADD/MANIPULATE appointment

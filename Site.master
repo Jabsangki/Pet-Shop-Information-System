@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="SiteMaster" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head runat="server">
+    <title></title>
+    <link href="~/Styles/Site.css" rel="stylesheet" type="text/css" />
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server" >
+
+    </asp:ContentPlaceHolder>
+    </head>
+<body>
+    <form runat="server">
+    <div class="page" style="background-color:#33CCCC;">  
+            <div class="clear header" 
+                
+                
+                
+                style="border-style: none; background-position: 00px 0px; background-image: url(' <%= imgPath %>'); background-repeat: no-repeat; background-color: #000080; background-attachment: inherit;" >
+                <div class="loginDisplay" >
+                <asp:Label ID="lbltype" runat="server" Visible="False"></asp:Label>
+                <asp:Label ID="lbluser" runat="server"></asp:Label>
+                <asp:LoginName ID="LoginName1" runat="server" />
+&nbsp; &nbsp;&nbsp;&nbsp;
+                <asp:LinkButton ID="LinkButton1" runat="server" onclick="LinkButton1_Click">Login</asp:LinkButton>
+            </div>
+            </div>        
+            <div class="clear hideSkiplink">
+                <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    onmenuitemclick="NavigationMenu_MenuItemClick">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Home.aspx" Text="HOME"/>
+                        <asp:MenuItem Text="PRODUCTS" Value="PRODUCTS" NavigateUrl="~/Products.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="SERVICES" Value="Services" NavigateUrl="~/Services.aspx"/>
+                        <asp:MenuItem NavigateUrl="~/Forum.aspx" Text="FACTS" Value="FORUM">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Contact.aspx" Text="CONTACT US" 
+                            Value="ContactUs">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="UserNav" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    onmenuitemclick="NavigationMenu_MenuItemClick" Visible="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Home.aspx" Text="HOME"/>
+                        <asp:MenuItem 
+                            Text="PROFILE" Value="PROFILE" NavigateUrl="~/UserProfile.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="PRODUCTS" Value="PRODUCTS" NavigateUrl="~/Products.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="SERVICES" Value="Services" NavigateUrl="~/Services.aspx"/>
+                        <asp:MenuItem NavigateUrl="~/Forum.aspx" Text="FACTS" Value="FORUM">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/ContactUs.aspx" Text="CONTACT US" 
+                            Value="ContactUs">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+                <asp:Menu ID="AdminNav" runat="server" CssClass="menu" 
+                    EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal" 
+                    onmenuitemclick="NavigationMenu_MenuItemClick" Visible="False">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Home.aspx" Text="HOME"/>
+                        <asp:MenuItem 
+                            Text="ADMIN" Value="ADMIN" NavigateUrl="~/UserProfile.aspx">
+                            <asp:MenuItem Text="Clients" 
+                                Value="Clients" NavigateUrl="~/Clients.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Appointment" 
+                                Value="Set Schedule">
+                                <asp:MenuItem NavigateUrl="~/SetApnt.aspx" Text="Set Appointment" 
+                                    Value="Set Appointment"></asp:MenuItem>
+                                <asp:MenuItem NavigateUrl="~/ApntRecord.aspx" Text="View Records" 
+                                    Value="View Records"></asp:MenuItem>
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Pet Status" Value="Pet Status" 
+                                NavigateUrl="~/PetCondition.aspx"></asp:MenuItem>
+                            <asp:MenuItem Text="Facts Q/A" Value="Facts Q/A" NavigateUrl="~/AskQa.aspx"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/AddHome.aspx" Text="Home Details" 
+                                Value="Home Details"></asp:MenuItem>
+                            <asp:MenuItem NavigateUrl="~/MarkDate.aspx" Text="Mark A Day" 
+                                Value="Mark A Day"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="PRODUCTS" Value="PRODUCTS" NavigateUrl="~/Products.aspx">
+                            <asp:MenuItem Text="Product Details" Value="Product Details" 
+                                NavigateUrl="~/AProdlist.aspx"></asp:MenuItem>
+                        </asp:MenuItem>
+                        <asp:MenuItem Text="SERVICES" Value="Services" NavigateUrl="~/Services.aspx"/>
+                        <asp:MenuItem NavigateUrl="~/Forum.aspx" Text="FACTS" Value="FORUM">
+                        </asp:MenuItem>
+                        <asp:MenuItem NavigateUrl="~/Contact.aspx" Text="CONTACT US" 
+                            Value="ContactUs">
+                        </asp:MenuItem>
+                    </Items>
+                </asp:Menu>
+            </div>
+            
+        <div class="main">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server"/>
+        </div>
+        <div class="clear">
+
+            </div>
+        
+    <div class="footer" style="background-color: #000080">    
+        THE ARK<br />
+        Animal Clinic<br />
+E. Jacinto Extension
+Davao City 8000<br />
+        Tel: (082) 286-7483 Mobile: 0922 821 5121
+        <br />
+        Email: <a href="https://www.facebook.com/thearkdavao/">https://www.facebook.com/thearkdavao</a><br />
+        Copyright 2018
+      
+    </div>
+    </div>
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

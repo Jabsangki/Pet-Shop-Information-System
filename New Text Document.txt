@@ -1,0 +1,9 @@
+db_a3539d_arkvet
+MYSQL: mysql5017.site4now.net
+Username: a3539d_arkvet
+Password: ******** 
+		
+		database=db_a3539d_arkvet; pooling=false", "mysql5017.site4now.net", "a3539d_arkvet", "unleashed321"
+
+                ConnectionString="<%$ ConnectionStrings:db_a3539d_arkvetConnectionString %>" 
+                ProviderName="<%$ ConnectionStrings:db_a3539d_arkvetConnectionString.ProviderName %>" 
